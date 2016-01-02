@@ -1,0 +1,48 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=5296
+
+The project is hosted at github: https://github.com/chemzqm/vim-run
+
+## Usage
+
+Config the command by filetype:
+
+``` vim
+let g:vim_run_command_map = {
+  \\&#039javascript&#039: &#039node&#039,
+  \\&#039php&#039: &#039php&#039,
+  \\&#039python&#039: &#039python&#039,
+  \\}
+```
+
+Run command with:
+
+``` vim
+:Run
+```
+
+Or you can specify the command after `Run`:
+
+``` vim
+:Run yourcommand
+```
+
+`yourcommand` will be used in the following `Run` and `Autorun` if they called with empty command argument
+
+Run command with range:
+
+``` vim
+:1,10Run
+```
+
+Run command with visual select:
+
+``` vim
+:&#039<,&#039>RunRange
+```
+
+Toggle command autorun on save of current file:
+
+``` vim
+:AutoRun
+```
+
